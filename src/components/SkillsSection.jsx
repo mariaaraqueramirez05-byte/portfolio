@@ -52,15 +52,15 @@ function SkillBar({ name, level, index }) {
   return (
     <div ref={ref} className="mb-4 last:mb-0">
       <div className="flex justify-between items-center mb-1.5">
-        <span className="text-sm text-earth-700">{name}</span>
-        <span className="text-xs text-earth-400">{level}%</span>
+        <span className="text-sm text-main">{name}</span>
+        <span className="text-xs text-muted">{level}%</span>
       </div>
-      <div className="h-2 bg-cream-200 rounded-full overflow-hidden">
+      <div className="h-2 bg-line rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={isInView ? { width: `${level}%` } : { width: 0 }}
           transition={{ duration: 1, delay: 0.1 * index, ease: 'easeOut' }}
-          className="h-full bg-gradient-to-r from-earth-400 to-earth-600 rounded-full"
+          className="h-full bg-gradient-to-r from-primary to-primary-dark rounded-full"
         />
       </div>
     </div>
@@ -69,7 +69,7 @@ function SkillBar({ name, level, index }) {
 
 export default function SkillsSection() {
   return (
-    <section id="habilidades" className="py-24 px-6 bg-cream-50">
+    <section id="habilidades" className="py-24 px-6 bg-base">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -78,10 +78,10 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-earth-500 font-medium text-sm uppercase tracking-[0.3em] mb-3">
+          <p className="text-primary font-medium text-sm uppercase tracking-[0.3em] mb-3">
             Habilidades
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-earth-800">
+          <h2 className="font-heading text-3xl md:text-4xl text-main">
             Mis herramientas y conocimientos
           </h2>
         </motion.div>
@@ -94,13 +94,13 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: catIdx * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-sm border border-cream-200/50 hover:shadow-md transition-shadow duration-300"
+              className="bg-card rounded-xl p-6 shadow-sm border border-line/50 hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-cream-100 flex items-center justify-center text-earth-500">
+                <div className="w-10 h-10 rounded-lg bg-card flex items-center justify-center text-primary">
                   {category.icon}
                 </div>
-                <h3 className="font-serif text-lg text-earth-800">{category.title}</h3>
+                <h3 className="font-heading text-lg text-main">{category.title}</h3>
               </div>
               {category.skills.map((skill, i) => (
                 <SkillBar key={skill.name} {...skill} index={i} />

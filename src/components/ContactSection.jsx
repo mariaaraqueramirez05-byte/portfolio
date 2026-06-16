@@ -32,7 +32,7 @@ const socialLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="py-24 px-6 bg-cream-100">
+    <section id="contacto" className="py-24 px-6 bg-card">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,10 +41,10 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-earth-500 font-medium text-sm uppercase tracking-[0.3em] mb-3">
+          <p className="text-primary font-medium text-sm uppercase tracking-[0.3em] mb-3">
             Contacto
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-earth-800">
+          <h2 className="font-heading text-3xl md:text-4xl text-main">
             Trabajemos juntos
           </h2>
         </motion.div>
@@ -58,41 +58,41 @@ export default function ContactSection() {
           >
             <form className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-earth-700 mb-1.5">
+                <label htmlFor="name" className="block text-sm font-medium text-main mb-1.5">
                   Nombre
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-white text-earth-800 placeholder-earth-300 focus:outline-none focus:ring-2 focus:ring-earth-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-line bg-card text-main placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                   placeholder="Tu nombre"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-earth-700 mb-1.5">
+                <label htmlFor="email" className="block text-sm font-medium text-main mb-1.5">
                   Correo electrónico
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-white text-earth-800 placeholder-earth-300 focus:outline-none focus:ring-2 focus:ring-earth-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-line bg-card text-main placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                   placeholder="tu@correo.com"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-earth-700 mb-1.5">
+                <label htmlFor="message" className="block text-sm font-medium text-main mb-1.5">
                   Mensaje
                 </label>
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-white text-earth-800 placeholder-earth-300 focus:outline-none focus:ring-2 focus:ring-earth-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-line bg-card text-main placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Cuéntame sobre tu proyecto..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-3.5 bg-earth-600 text-white rounded-xl font-medium text-sm hover:bg-earth-700 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="w-full px-8 py-3.5 bg-primary text-white rounded-xl font-medium text-sm hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 Enviar mensaje
               </button>
@@ -107,10 +107,10 @@ export default function ContactSection() {
             className="flex flex-col justify-between"
           >
             <div>
-              <h3 className="font-serif text-2xl text-earth-800 mb-4">
+              <h3 className="font-heading text-2xl text-main mb-4">
                 Hablemos de tu próximo proyecto
               </h3>
-              <p className="text-earth-600/80 leading-relaxed mb-8">
+              <p className="text-muted/80 leading-relaxed mb-8">
                 Estoy abierta a nuevas oportunidades y colaboraciones. 
                 Si tienes un proyecto en mente o simplemente quieres saludar, 
                 no dudes en escribirme.
@@ -119,7 +119,7 @@ export default function ContactSection() {
               <div className="space-y-4 mb-8">
                 <a
                   href="mailto:maria@example.com"
-                  className="flex items-center gap-3 text-earth-600 hover:text-earth-500 transition-colors"
+                  className="flex items-center gap-3 text-secondary-light hover:text-primary transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -130,7 +130,7 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <p className="text-sm font-medium text-earth-600 mb-4">Encuéntrame en:</p>
+              <p className="text-sm font-medium text-secondary-light mb-4">Encuéntrame en:</p>
               <div className="flex gap-3">
                 {socialLinks.map((link) => (
                   <a
@@ -138,7 +138,7 @@ export default function ContactSection() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white border border-cream-200 flex items-center justify-center text-earth-500 hover:bg-earth-600 hover:text-white hover:border-earth-600 transition-all duration-300"
+                    className="w-10 h-10 rounded-full bg-card border border-line flex items-center justify-center text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                     aria-label={link.name}
                   >
                     {link.icon}

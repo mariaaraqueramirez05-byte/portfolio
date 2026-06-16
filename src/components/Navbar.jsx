@@ -33,7 +33,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-cream-50/90 backdrop-blur-md shadow-sm'
+          ? 'bg-base/90 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -41,9 +41,9 @@ export default function Navbar() {
         <a
           href="#inicio"
           onClick={(e) => { e.preventDefault(); handleClick('#inicio') }}
-          className="font-serif text-xl font-semibold text-earth-800 hover:text-earth-600 transition-colors"
+          className="font-heading text-xl font-semibold text-main hover:text-primary transition-colors"
         >
-          MG<span className="text-earth-500">.</span>
+          MG<span className="text-primary">.</span>
         </a>
 
         <button
@@ -53,15 +53,15 @@ export default function Navbar() {
         >
           <motion.span
             animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-earth-800 transition-colors"
+            className="block w-6 h-0.5 bg-main transition-colors"
           />
           <motion.span
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="block w-6 h-0.5 bg-earth-800 transition-colors"
+            className="block w-6 h-0.5 bg-main transition-colors"
           />
           <motion.span
             animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-earth-800 transition-colors"
+            className="block w-6 h-0.5 bg-main transition-colors"
           />
         </button>
 
@@ -71,7 +71,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => { e.preventDefault(); handleClick(link.href) }}
-              className="text-sm font-medium text-earth-700 hover:text-earth-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-earth-500 after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-medium text-main hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-cream-50/95 backdrop-blur-md overflow-hidden"
+            className="lg:hidden bg-base/95 backdrop-blur-md overflow-hidden"
           >
             <div className="px-6 pb-6 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -93,7 +93,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleClick(link.href) }}
-                  className="text-base font-medium text-earth-700 hover:text-earth-500 transition-colors"
+                  className="text-base font-medium text-main hover:text-primary transition-colors"
                 >
                   {link.label}
                 </a>

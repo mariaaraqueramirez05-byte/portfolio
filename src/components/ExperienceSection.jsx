@@ -41,25 +41,25 @@ function TimelineItem({ experience, index }) {
       className="relative pl-8 md:pl-0 md:flex md:gap-8"
     >
       <div className="hidden md:block md:w-1/2 md:text-right">
-        <span className="text-earth-400 text-sm font-medium">{experience.period}</span>
+        <span className="text-muted text-sm font-medium">{experience.period}</span>
       </div>
 
       <div className="relative pb-12 md:w-1/2">
-        <div className="absolute left-[-25px] md:left-[-24.5px] top-1 w-3 h-3 rounded-full bg-earth-500 border-2 border-cream-50 z-10" />
+        <div className="absolute left-[-25px] md:left-[-24.5px] top-1 w-3 h-3 rounded-full bg-primary border-2 border-base z-10" />
         <div className="md:hidden mb-1">
-          <span className="text-earth-400 text-sm font-medium">{experience.period}</span>
+          <span className="text-muted text-sm font-medium">{experience.period}</span>
         </div>
-        <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-cream-200/50">
-          <h3 className="font-serif text-xl text-earth-800 mb-1">{experience.role}</h3>
-          <p className="text-earth-500 font-medium text-sm mb-3">{experience.company}</p>
-          <p className="text-earth-600/80 text-sm leading-relaxed mb-4">
+        <div className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-line/50">
+          <h3 className="font-heading text-xl text-main mb-1">{experience.role}</h3>
+          <p className="text-primary font-medium text-sm mb-3">{experience.company}</p>
+          <p className="text-muted/80 text-sm leading-relaxed mb-4">
             {experience.description}
           </p>
           <div className="flex flex-wrap gap-2">
             {experience.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-3 py-1 rounded-full bg-cream-100 text-earth-600 font-medium"
+                className="text-xs px-3 py-1 rounded-full bg-card text-secondary-light font-medium"
               >
                 {tag}
               </span>
@@ -73,7 +73,7 @@ function TimelineItem({ experience, index }) {
 
 export default function ExperienceSection() {
   return (
-    <section id="experiencia" className="py-24 px-6 bg-cream-100">
+    <section id="experiencia" className="py-24 px-6 bg-card">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -82,16 +82,16 @@ export default function ExperienceSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-earth-500 font-medium text-sm uppercase tracking-[0.3em] mb-3">
+          <p className="text-primary font-medium text-sm uppercase tracking-[0.3em] mb-3">
             Experiencia
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-earth-800">
+          <h2 className="font-heading text-3xl md:text-4xl text-main">
             Trayectoria profesional
           </h2>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-[7px] md:left-1/2 md:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-cream-300" />
+          <div className="absolute left-[7px] md:left-1/2 md:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-line" />
 
           <div className="space-y-0">
             {experiences.map((exp, i) => (
