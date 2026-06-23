@@ -9,12 +9,13 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 116 >>
+<< /Length 210 >>
 stream
-BT /F1 28 Tf 50 700 Td (Curriculum Vitae) Tj
-BT /F1 14 Tf 50 650 Td (Maria Gabriela Araque Ramirez) Tj
-BT /F1 12 Tf 50 620 Td (Disenadora Grafica) Tj
-BT /F1 10 Tf 50 580 Td (Reemplaza este archivo con tu CV real en PDF.) Tj
+BT
+/F1 28 Tf 50 700 Td (Curriculum Vitae) Tj
+/F1 14 Tf 50 650 Td (Maria Gabriela Araque Ramirez) Tj
+/F1 12 Tf 50 620 Td (Disenadora Grafica) Tj
+/F1 10 Tf 50 580 Td (Reemplaza este archivo con tu CV real.) Tj
 ET
 endstream
 endobj
@@ -27,10 +28,10 @@ xref
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000266 00000 n 
-0000000432 00000 n 
+0000000241 00000 n 
+0000000502 00000 n 
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-493
+572
 %%EOF

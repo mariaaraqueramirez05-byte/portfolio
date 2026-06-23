@@ -79,7 +79,7 @@ export default function HeroSection() {
           <a
             href="/cv.pdf"
             target="_blank"
-            download
+            rel="noopener noreferrer"
             className="px-8 py-3.5 border-2 border-primary text-main rounded-full font-medium text-sm hover:bg-primary/10 transition-all duration-300 hover:-translate-y-0.5"
           >
             Descargar CV
