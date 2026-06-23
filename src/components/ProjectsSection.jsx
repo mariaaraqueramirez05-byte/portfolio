@@ -8,55 +8,61 @@ const behanceUrl = 'https://www.behance.net/mariaaraqueramirez05'
 const projects = [
   {
     id: 1,
-    title: 'Terraza Sexto Cielo',
+    title: 'Identidad Visual',
+    subtitle: 'Branding para Terraza Sexto Cielo',
     category: 'Identidad visual',
-    description: 'Identidad visual completa y estrategia de contenido para terraza-bar, incluyendo diseño de menús, piezas promocionales y gestión de redes sociales.',
-    tools: ['Illustrator', 'Photoshop', 'Lightroom'],
+    description: 'Diseño de identidad visual completa: logotipo, paleta cromática, tipografía, piezas promocionales y estrategia de contenido. Un proyecto que requería transmitir calidez y personalidad en cada punto de contacto visual.',
+    tools: ['Illustrator', 'Photoshop', 'InDesign'],
     url: behanceUrl,
     color: 'from-primary to-primary-dark',
   },
   {
     id: 2,
-    title: 'Maquiagrícola del Norte',
+    title: 'Diseño Web',
+    subtitle: 'Portafolio profesional — proyecto personal',
     category: 'Web',
-    description: 'Desarrollo de landing pages y optimización web para mejorar la presencia digital de la empresa agrícola.',
-    tools: ['Shopify', 'HTML/CSS', 'SEO'],
+    description: 'Diseño y desarrollo de este portafolio web con React y Tailwind CSS. Optimizado para rendimiento, responsive, con animaciones fluidas y una experiencia de usuario pensada para destacar el trabajo creativo.',
+    tools: ['Figma', 'HTML/CSS', 'JavaScript'],
     url: behanceUrl,
     color: 'from-secondary to-secondary-light',
   },
   {
     id: 3,
-    title: 'Creative Jungle',
-    category: 'Branding',
-    description: 'Diseño de piezas gráficas para campañas digitales y apoyo en la conceptualización creativa de proyectos de branding.',
-    tools: ['Illustrator', 'InDesign', 'Figma'],
+    title: 'SEO y Optimización Web',
+    subtitle: 'Proyecto desarrollado para Maquiagrícola del Norte',
+    category: 'Web',
+    description: 'Optimización de páginas web, desarrollo de landing pages enfocadas en conversión y mejora de posicionamiento SEO. Implementación de buenas prácticas de rendimiento y accesibilidad para maximizar el alcance orgánico.',
+    tools: ['Shopify', 'HTML/CSS', 'SEO'],
     url: behanceUrl,
     color: 'from-amber-400 to-amber-600',
   },
   {
     id: 4,
-    title: 'Contenido para Redes',
+    title: 'Ilustración Digital',
+    subtitle: 'Proyectos personales y comerciales',
     category: 'Contenido digital',
-    description: 'Creación y edición de contenido audiovisual para redes sociales, incluyendo grabación de material y postproducción.',
-    tools: ['Photoshop', 'Premiere Pro', 'Lightroom'],
+    description: 'Creación de ilustraciones digitales con técnicas vectoriales y rasterizadas. Desde piezas decorativas hasta gráficos funcionales, combinando creatividad y precisión técnica para comunicar visualmente.',
+    tools: ['Illustrator', 'Photoshop', 'Procreate'],
     url: behanceUrl,
     color: 'from-rose-300 to-rose-500',
   },
   {
     id: 5,
-    title: 'Landing Page Corporativa',
-    category: 'Web',
-    description: 'Diseño y desarrollo de landing page optimizada para conversión con enfoque en UX/UI y principios de accesibilidad.',
-    tools: ['Figma', 'HTML/CSS', 'JavaScript'],
+    title: 'Infografías',
+    subtitle: 'Datos complejos, diseño claro',
+    category: 'Contenido digital',
+    description: 'Diseño de infografías que transforman información compleja en piezas visuales claras, atractivas y fáciles de digerir. Cada proyecto un ejercicio de síntesis, jerarquía visual y comunicación estratégica.',
+    tools: ['Illustrator', 'InDesign', 'Photoshop'],
     url: behanceUrl,
     color: 'from-sky-400 to-blue-500',
   },
   {
     id: 6,
-    title: 'Identidad de Marca',
-    category: 'Identidad visual',
-    description: 'Creación de identidad visual completa incluyendo logotipo, paleta cromática, tipografía y aplicaciones de marca.',
-    tools: ['Illustrator', 'Photoshop', 'InDesign'],
+    title: 'Contenido para Redes Sociales',
+    subtitle: 'Gestión y creación para múltiples marcas',
+    category: 'Contenido digital',
+    description: 'Creación de contenido audiovisual, fotografía, edición de video y diseño gráfico para redes sociales. Estrategia visual coherente que mantiene la identidad de marca mientras genera engagement y alcance.',
+    tools: ['Photoshop', 'Premiere Pro', 'Lightroom'],
     url: behanceUrl,
     color: 'from-emerald-300 to-emerald-500',
   },
@@ -150,9 +156,10 @@ export default function ProjectsSection() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-heading text-lg text-main mb-2 group-hover:text-secondary-light transition-colors">
+                  <h3 className="font-heading text-lg text-main group-hover:text-secondary-light transition-colors">
                     {project.title}
                   </h3>
+                  <p className="text-xs text-muted mt-0.5 mb-2">{project.subtitle}</p>
                   <p className="text-secondary-light/80 text-sm leading-relaxed mb-4 line-clamp-2">
                     {project.description}
                   </p>
