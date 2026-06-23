@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const categories = ['Todos', 'Identidad visual', 'Contenido digital', 'Web', 'Branding']
 
+const behanceUrl = 'https://www.behance.net/mariaaraqueramirez05'
+
 const projects = [
   {
     id: 1,
@@ -10,7 +12,7 @@ const projects = [
     category: 'Identidad visual',
     description: 'Identidad visual completa y estrategia de contenido para terraza-bar, incluyendo diseño de menús, piezas promocionales y gestión de redes sociales.',
     tools: ['Illustrator', 'Photoshop', 'Lightroom'],
-    image: null,
+    url: behanceUrl,
     color: 'from-primary to-primary-dark',
   },
   {
@@ -19,7 +21,7 @@ const projects = [
     category: 'Web',
     description: 'Desarrollo de landing pages y optimización web para mejorar la presencia digital de la empresa agrícola.',
     tools: ['Shopify', 'HTML/CSS', 'SEO'],
-    image: null,
+    url: behanceUrl,
     color: 'from-secondary to-secondary-light',
   },
   {
@@ -28,7 +30,7 @@ const projects = [
     category: 'Branding',
     description: 'Diseño de piezas gráficas para campañas digitales y apoyo en la conceptualización creativa de proyectos de branding.',
     tools: ['Illustrator', 'InDesign', 'Figma'],
-    image: null,
+    url: behanceUrl,
     color: 'from-amber-400 to-amber-600',
   },
   {
@@ -37,7 +39,7 @@ const projects = [
     category: 'Contenido digital',
     description: 'Creación y edición de contenido audiovisual para redes sociales, incluyendo grabación de material y postproducción.',
     tools: ['Photoshop', 'Premiere Pro', 'Lightroom'],
-    image: null,
+    url: behanceUrl,
     color: 'from-rose-300 to-rose-500',
   },
   {
@@ -46,7 +48,7 @@ const projects = [
     category: 'Web',
     description: 'Diseño y desarrollo de landing page optimizada para conversión con enfoque en UX/UI y principios de accesibilidad.',
     tools: ['Figma', 'HTML/CSS', 'JavaScript'],
-    image: null,
+    url: behanceUrl,
     color: 'from-sky-400 to-blue-500',
   },
   {
@@ -55,7 +57,7 @@ const projects = [
     category: 'Identidad visual',
     description: 'Creación de identidad visual completa incluyendo logotipo, paleta cromática, tipografía y aplicaciones de marca.',
     tools: ['Illustrator', 'Photoshop', 'InDesign'],
-    image: null,
+    url: behanceUrl,
     color: 'from-emerald-300 to-emerald-500',
   },
 ]
@@ -164,16 +166,41 @@ export default function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <button className="text-sm font-medium text-secondary-light hover:text-primary transition-colors flex items-center gap-1 group/btn">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-secondary-light hover:text-primary transition-colors flex items-center gap-1 group/btn"
+                  >
                     Ver proyecto
                     <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mt-12"
+        >
+          <a
+            href={behanceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-medium text-sm hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 7.5h-8v-1h8v1zm0-3h-8v1h8v-1zM14 12.5c.8.6 1.3 1.5 1.3 2.7 0 2.3-1.5 3.8-4 3.8H6V5.2h5.2c2 0 3.3 1.1 3.3 3 0 1.4-.9 2.4-2.5 2.9v.2c1.9.3 3 1.3 3 3.2zm-5-5.8H9v3.1h1.2c1.1 0 1.7-.5 1.7-1.5s-.6-1.6-1.9-1.6zm0 4.7H9v3.6h1.6c1.2 0 1.9-.6 1.9-1.8s-.8-1.8-2.5-1.8zM24 17.5h-5.2c.3 1.4 1.3 2.1 2.7 2.1 1.1 0 1.9-.4 2.5-1.2l1.5 1c-.9 1.3-2.2 2-4 2-2.9 0-4.8-2.1-4.8-5s1.9-5 4.8-5c2.8 0 4.5 2 4.5 5 0 .4 0 .8-.3 1.1zm-5.3-1.4h3.2c-.2-1.3-1-2-1.8-2s-1.4.7-1.4 2z" />
+            </svg>
+            Ver todos en Behance
+          </a>
         </motion.div>
       </div>
     </section>
