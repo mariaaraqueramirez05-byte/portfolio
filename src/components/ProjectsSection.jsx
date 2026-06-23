@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const categories = ['Todos', 'Identidad visual', 'Contenido digital', 'Web', 'Branding']
 
-const behanceUrl = 'https://www.behance.net/mariaaraqueramirez05'
+const behanceProfileUrl = 'https://www.behance.net/mariaaraqueramirez05'
 
 const projects = [
   {
@@ -13,7 +13,7 @@ const projects = [
     category: 'Identidad visual',
     description: 'Diseño de identidad visual completa: logotipo, paleta cromática, tipografía, piezas promocionales y estrategia de contenido. Un proyecto que requería transmitir calidez y personalidad en cada punto de contacto visual.',
     tools: ['Illustrator', 'Photoshop', 'InDesign'],
-    url: behanceUrl,
+    url: 'https://www.behance.net/gallery/224617793/Manual-de-Marca-Terraza-Sexto-Cielo',
     color: 'from-primary to-primary-dark',
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     category: 'Web',
     description: 'Diseño y desarrollo de este portafolio web con React y Tailwind CSS. Optimizado para rendimiento, responsive, con animaciones fluidas y una experiencia de usuario pensada para destacar el trabajo creativo.',
     tools: ['Figma', 'HTML/CSS', 'JavaScript'],
-    url: behanceUrl,
+    url: behanceProfileUrl,
     color: 'from-secondary to-secondary-light',
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     category: 'Web',
     description: 'Optimización de páginas web, desarrollo de landing pages enfocadas en conversión y mejora de posicionamiento SEO. Implementación de buenas prácticas de rendimiento y accesibilidad para maximizar el alcance orgánico.',
     tools: ['Shopify', 'HTML/CSS', 'SEO'],
-    url: behanceUrl,
+    url: 'https://www.behance.net/gallery/249117783/Rediseno-Web-MQ-del-Norte',
     color: 'from-amber-400 to-amber-600',
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     category: 'Contenido digital',
     description: 'Creación de ilustraciones digitales con técnicas vectoriales y rasterizadas. Desde piezas decorativas hasta gráficos funcionales, combinando creatividad y precisión técnica para comunicar visualmente.',
     tools: ['Illustrator', 'Photoshop', 'Procreate'],
-    url: behanceUrl,
+    url: 'https://www.behance.net/gallery/221378537/Libro-Kells-Ilustracion',
     color: 'from-rose-300 to-rose-500',
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     category: 'Contenido digital',
     description: 'Diseño de infografías que transforman información compleja en piezas visuales claras, atractivas y fáciles de digerir. Cada proyecto un ejercicio de síntesis, jerarquía visual y comunicación estratégica.',
     tools: ['Illustrator', 'InDesign', 'Photoshop'],
-    url: behanceUrl,
+    url: 'https://www.behance.net/gallery/215474319/Infografia-Energia-Renovable',
     color: 'from-sky-400 to-blue-500',
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     category: 'Contenido digital',
     description: 'Creación de contenido audiovisual, fotografía, edición de video y diseño gráfico para redes sociales. Estrategia visual coherente que mantiene la identidad de marca mientras genera engagement y alcance.',
     tools: ['Photoshop', 'Premiere Pro', 'Lightroom'],
-    url: behanceUrl,
+    url: 'https://www.behance.net/gallery/251562389/Contenido-para-redes-sociales',
     color: 'from-emerald-300 to-emerald-500',
   },
 ]
@@ -132,14 +132,17 @@ export default function ProjectsSection() {
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
-              <motion.div
+              <motion.a
                 key={project.id}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 layout
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-line/50"
+                className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-line/50 cursor-pointer block"
               >
                 <div
                   className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}
@@ -173,19 +176,14 @@ export default function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-secondary-light hover:text-primary transition-colors flex items-center gap-1 group/btn"
-                  >
+                  <span className="text-sm font-medium text-secondary-light group-hover:text-primary transition-colors inline-flex items-center gap-1.5">
                     Ver proyecto
-                    <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
-                  </a>
+                  </span>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </AnimatePresence>
         </motion.div>
@@ -198,7 +196,7 @@ export default function ProjectsSection() {
           className="text-center mt-12"
         >
           <a
-            href={behanceUrl}
+            href={behanceProfileUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-medium text-sm hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
