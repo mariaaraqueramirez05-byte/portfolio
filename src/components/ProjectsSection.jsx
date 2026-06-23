@@ -14,6 +14,7 @@ const projects = [
     description: 'Diseño de identidad visual completa: logotipo, paleta cromática, tipografía, piezas promocionales y estrategia de contenido. Un proyecto que requería transmitir calidez y personalidad en cada punto de contacto visual.',
     tools: ['Illustrator', 'Photoshop', 'InDesign'],
     url: 'https://www.behance.net/gallery/224617793/Manual-de-Marca-Terraza-Sexto-Cielo',
+    image: '/images/projects/identidad-visual.png',
     color: 'from-primary to-primary-dark',
   },
   {
@@ -24,6 +25,7 @@ const projects = [
     description: 'Diseño y desarrollo de este portafolio web con React y Tailwind CSS. Optimizado para rendimiento, responsive, con animaciones fluidas y una experiencia de usuario pensada para destacar el trabajo creativo.',
     tools: ['Figma', 'HTML/CSS', 'JavaScript'],
     url: behanceProfileUrl,
+    image: '/images/projects/diseno-web.png',
     color: 'from-secondary to-secondary-light',
   },
   {
@@ -34,6 +36,7 @@ const projects = [
     description: 'Optimización de páginas web, desarrollo de landing pages enfocadas en conversión y mejora de posicionamiento SEO. Implementación de buenas prácticas de rendimiento y accesibilidad para maximizar el alcance orgánico.',
     tools: ['Shopify', 'HTML/CSS', 'SEO'],
     url: 'https://www.behance.net/gallery/249117783/Rediseno-Web-MQ-del-Norte',
+    image: '/images/projects/seo-optimizacion-web.png',
     color: 'from-amber-400 to-amber-600',
   },
   {
@@ -44,6 +47,7 @@ const projects = [
     description: 'Creación de ilustraciones digitales con técnicas vectoriales y rasterizadas. Desde piezas decorativas hasta gráficos funcionales, combinando creatividad y precisión técnica para comunicar visualmente.',
     tools: ['Illustrator', 'Photoshop', 'Procreate'],
     url: 'https://www.behance.net/gallery/221378537/Libro-Kells-Ilustracion',
+    image: '/images/projects/ilustracion-digital.png',
     color: 'from-rose-300 to-rose-500',
   },
   {
@@ -54,6 +58,7 @@ const projects = [
     description: 'Diseño de infografías que transforman información compleja en piezas visuales claras, atractivas y fáciles de digerir. Cada proyecto un ejercicio de síntesis, jerarquía visual y comunicación estratégica.',
     tools: ['Illustrator', 'InDesign', 'Photoshop'],
     url: 'https://www.behance.net/gallery/215474319/Infografia-Energia-Renovable',
+    image: '/images/projects/infografias.png',
     color: 'from-sky-400 to-blue-500',
   },
   {
@@ -64,6 +69,7 @@ const projects = [
     description: 'Creación de contenido audiovisual, fotografía, edición de video y diseño gráfico para redes sociales. Estrategia visual coherente que mantiene la identidad de marca mientras genera engagement y alcance.',
     tools: ['Photoshop', 'Premiere Pro', 'Lightroom'],
     url: 'https://www.behance.net/gallery/251562389/Contenido-para-redes-sociales',
+    image: '/images/projects/redes-sociales.png',
     color: 'from-emerald-300 to-emerald-500',
   },
 ]
@@ -144,14 +150,13 @@ export default function ProjectsSection() {
                 exit="exit"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-line/50 cursor-pointer block"
               >
-                <div
-                  className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity duration-300">
-                    <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                    </svg>
-                  </div>
+                <div className="h-48 relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute top-3 left-3">
                     <span className="text-xs px-2.5 py-1 rounded-full bg-card/80 text-main font-medium backdrop-blur-sm">
                       {project.category}

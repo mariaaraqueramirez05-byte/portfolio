@@ -29,10 +29,12 @@ export default function HeroSection() {
         className="max-w-4xl mx-auto text-center relative z-10"
       >
         <motion.div variants={itemVariants} className="mb-8">
-          <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 bg-line">
-            <div className="w-full h-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white text-5xl font-heading">
-              MG
-            </div>
+          <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl mb-6 bg-card">
+            <img
+              src="/images/projects/perfil.png"
+              alt="Maria Gabriela Araque Ramírez"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
