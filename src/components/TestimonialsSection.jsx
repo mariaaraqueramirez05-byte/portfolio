@@ -2,10 +2,9 @@ import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    text: 'El espacio está preparado para recibir tus recomendaciones. Esta sección se llenará pronto con las experiencias de quienes han trabajado conmigo.',
-    author: '¿Trabajamos juntos?',
-    role: 'Tu opinión es importante',
-    placeholder: true,
+    text: 'Maria Gabriela es una diseñadora muy comprometida, creativa y responsable. Durante su tiempo en Terraza Sexto Cielo demostró gran habilidad en diseño gráfico, manejo de redes y edición visual, siempre aportando ideas frescas y soluciones efectivas.',
+    author: 'Humberto Faillace',
+    role: 'Dueño de Terraza Sexto Cielo',
   },
 ]
 
